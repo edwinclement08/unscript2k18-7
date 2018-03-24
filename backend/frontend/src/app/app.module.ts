@@ -1,3 +1,4 @@
+import { ApiService } from './api.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, PipeTransform } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -41,7 +42,7 @@ const appRoutes: Routes = [
     StudentApplicationsComponent,
     EligibilityFormComponent,
     StudentPageComponent,
-    CouncilPageComponent
+    CouncilPageComponent,
     StudentPageComponent,
     TempComponent,
     LoginComponent,
@@ -51,7 +52,7 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
