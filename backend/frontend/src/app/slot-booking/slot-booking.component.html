@@ -1,12 +1,20 @@
 <div class="slotBooker">
-  <span class="floorSelection">
-    <span *ngFor="let floor of floors" >
+  <span class="">
+    <div class="floorSelector">
+      <button *ngFor="let floor of floors" class="floorSelectOptions" [ngClass]="{'current': floor.name == currentFloor}"
+      (onclick)="floorClicked(floor)">
         {{floor.name}}
+    </button>
+    </div>
+
+    <span *ngFor="let floor of floors">
+      {{floor.name}}
+      <div>
         <span *ngFor="let room of floor.rooms" class="rooms" [ngClass]="{'booked': room.bookstatus }">
-          {{room.bookstatus}}
+          {{room.name}}
 
         </span>
-
+      </div>
     </span>
 
 

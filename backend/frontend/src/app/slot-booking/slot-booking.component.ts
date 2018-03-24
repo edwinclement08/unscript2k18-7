@@ -9,26 +9,35 @@ import fabric from 'fabric'
 })
 export class SlotBookingComponent implements OnInit {
   x: number[];
-  floors:any;
+  floors: any;
+  currentFloor: string;
   constructor() {
-    this.x = [10, 12];
     this.floors = [
-      [new Floor("9th Floor", [new Room("Samvaad", true), new Room("Open Source Lab", true)])],
-      [new Floor("8th Floor", [new Room("806", false), new Room("807", false)])],
+      new Floor("9th Floor", [new Room("Samvaad", true), new Room("Open Source Lab", true),]),
+      new Floor("8th Floor", [new Room("806", false), new Room("807", false), new Room("807", false)]),
 
     ];
+    this.currentFloor = "9th Floor";
   }
 
   ngOnInit() {
+  }
+
+  floorClicked($ev) {
+    // this.currentFloor = floor.name;
+    // console.log(floor.name);
+    console.log($ev);
+    
+    
   }
 
 }
 
 
 class Room {
-  name:string;
-  bookstatus:boolean;
-  constructor(name:string, bookStatus:boolean)  {
+  name: string;
+  bookstatus: boolean;
+  constructor(name: string, bookStatus: boolean) {
     this.name = name;
     this.bookstatus = bookStatus;
   }
@@ -36,8 +45,8 @@ class Room {
 
 class Floor {
   rooms: Room[];
-  name:string;
-  constructor(name:string,rooms:Room[]) {
+  name: string;
+  constructor(name: string, rooms: Room[]) {
     this.rooms = rooms;
     this.name = name;
   }

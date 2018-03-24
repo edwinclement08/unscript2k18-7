@@ -42,9 +42,22 @@
 }
 
 
-.floorSelection {
+.floorSelectOptions {
+    height:5vh;
+    width:5vw;
+    border: black thin solid;
+    display: inline-block;
+    margin:15px;
     border-radius: 5px;
-    display: block;
-    
+    text-align: center;
+    vertical-align: middle;  
 
+}
+
+.floorSelectOptions.current    {
+    background-color: grey;
+}
+
+.floorSelector  {
+    text-align:center;
 }
