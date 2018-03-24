@@ -33,3 +33,9 @@
     {{company.job_profile}}
   </p>
 </div>
+
+<h2>Eligible Students: </h2>
+<div *ngFor="let student of studentList">
+  <strong>{{student.name}}</strong>
+  {{student.resume}}
+</div>

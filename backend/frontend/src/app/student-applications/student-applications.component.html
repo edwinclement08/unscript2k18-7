@@ -1,3 +1,5 @@
-<p>
-  student-applications works!
-</p>
+<h2>Eligible Students: </h2>
+<div *ngFor="let student of studentList">
+  <strong>{{student.name}}</strong>
+  {{student.resume}}
+</div>
