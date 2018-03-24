@@ -5,7 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require("mongoose");
 
-mongoose.connect('mongodb://mongo/myappdatabase');
+setTimeout(() => {mongoose.connect('mongodb://mongo/myappdatabase')}, 1000)
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
