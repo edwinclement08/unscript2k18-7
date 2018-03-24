@@ -8,6 +8,7 @@ import { LandingStatisticsComponent } from './landing-statistics/landing-statist
 import { LandingEventComponent } from './landing-event/landing-event.component';
 import { NoticeBoardComponent } from './notice-board/notice-board.component';
 import { SlotBookingComponent } from './slot-booking/slot-booking.component';
+import { CompanyPageComponent } from './company-page/company-page.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SlotBookingComponent } from './slot-booking/slot-booking.component';
     LandingStatisticsComponent,
     LandingEventComponent,
     NoticeBoardComponent,
-    SlotBookingComponent
+    SlotBookingComponent,
+    CompanyPageComponent
   ],
   imports: [
     BrowserModule
