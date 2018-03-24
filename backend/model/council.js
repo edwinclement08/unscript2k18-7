@@ -5,6 +5,7 @@ var bcrypt   = require("bcrypt-nodejs");
 var council = new mongoose.Schema({
 	name:String,
 	password:String,
+	email:String,
 	member:[
 		{
 			name:String,
@@ -14,20 +15,13 @@ var council = new mongoose.Schema({
 			photo:String
 		}
 	],
-
 	event:[
 		{
-			date:Date,
-			name:String,
-			place:String,
-			cost:String,
-			room:String,
-			perm:[{
-				security:Boolean,
-				hod:Boolean,		
-			}]
+			type: mongoose.Schema.Types.ObjectId,
+			ref: "Event"
 		}
 	]
+
  });
 
 
