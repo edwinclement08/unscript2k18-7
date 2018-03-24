@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, PipeTransform } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
@@ -13,7 +14,20 @@ import { StudentApplicationsComponent } from './student-applications/student-app
 import { EligibilityFormComponent } from './eligibility-form/eligibility-form.component';
 import { StudentPageComponent } from './student-page/student-page.component';
 import { Pipe } from '@angular/core/src/metadata/directives';
+import { CouncilPageComponent } from './council-page/council-page.component';
+import { TempComponent } from './temp/temp.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
+// { path: 'hero/:id',      component: HeroDetailComponent },
+const appRoutes: Routes = [
+  { path: '',         component: LandingPageComponent,  data: { title: 'Home Page' }  },
+  { path: 'temp',     component: TempComponent, data: { title: 'Temp' }  },
+  { path: 'company',  component: CompanyPageComponent, data: { title: 'Company' } },
+  // { path: 'company',  component: TempComponent, data: { title: 'Company' } },
+  
+];
+//   { path: '**', component: PageNotFoundComponent }
 
 @NgModule({
   declarations: [
@@ -26,10 +40,16 @@ import { Pipe } from '@angular/core/src/metadata/directives';
     CompanyPageComponent,
     StudentApplicationsComponent,
     EligibilityFormComponent,
-    StudentPageComponent
+    StudentPageComponent,
+    CouncilPageComponent
+    StudentPageComponent,
+    TempComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

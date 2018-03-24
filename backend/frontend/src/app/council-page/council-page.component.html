@@ -1,0 +1,14 @@
+<h1>{{council.name}}</h1>
+<p>Email id: {{council.email}}</p>
+<div *ngFor="let member of council.members">
+  <div>
+    <img [src]=member.photo alt="profile photo">
+  </div>
+  <div>
+    <strong>Name :</strong>{{member.name}}</div>
+  <div>
+    <strong>Position :</strong>{{member.position}}</div>
+  <div>
+    <strong>Name</strong>{{member.phone}}</div>
+
+</div>

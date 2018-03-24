@@ -30,13 +30,13 @@ export class StudentPageComponent implements OnInit  {
           ],
           pg: [
             {
-              deg: String,
-              clg: String,
-              startYear: String,
-              endYear: String,
-              stream: String,
-              scale: String,
-              grade: String
+              deg: "BE",
+              clg: "Fr.Conceicao Rodrigues College of Engineering",
+              startYear: "2015",
+              endYear: "2019",
+              stream: "Computer",
+              scale: "10",
+              grade: "10"
             }
           ],
           phd: [
@@ -51,12 +51,12 @@ export class StudentPageComponent implements OnInit  {
             }
           ],
           hsc: {
-            school: String,
-            yearPass: String,
-            board: String,
-            scale: String,
-            grade: String,
-            stream: String
+            school: "abc",
+            yearPass: 2018,
+            board: "abc",
+            scale: "abc",
+            grade: "abc",
+            stream:"abc"
           },
           diploma:
             {
@@ -69,12 +69,12 @@ export class StudentPageComponent implements OnInit  {
 
             },
           ssc: {
-            school: String,
-            yearPass: String,
-            board: String,
-            scale: String,
-            grade: String,
-            stream: String
+            school: "String",
+            yearPass: "tring,",
+            board: "String",
+            scale: "String",
+            grade: "String",
+            stream: "String"
           }
         },
 
