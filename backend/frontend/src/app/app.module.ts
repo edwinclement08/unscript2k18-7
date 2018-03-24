@@ -7,6 +7,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LandingStatisticsComponent } from './landing-statistics/landing-statistics.component';
 import { LandingEventComponent } from './landing-event/landing-event.component';
 import { NoticeBoardComponent } from './notice-board/notice-board.component';
+import { SlotBookingComponent } from './slot-booking/slot-booking.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { NoticeBoardComponent } from './notice-board/notice-board.component';
     LandingPageComponent,
     LandingStatisticsComponent,
     LandingEventComponent,
-    NoticeBoardComponent
+    NoticeBoardComponent,
+    SlotBookingComponent
   ],
   imports: [
     BrowserModule

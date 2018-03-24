@@ -1,0 +1,16 @@
+<div class="slotBooker">
+  <span class="floorSelection">
+    <span *ngFor="let floor of floors" >
+        {{floor.name}}
+        <span *ngFor="let room of floor.rooms" class="rooms" [ngClass]="{'booked': room.bookstatus }">
+          {{room.bookstatus}}
+
+        </span>
+
+    </span>
+
+
+  </span>
+
+
+</div>
