@@ -16,18 +16,14 @@ export class SlotBookingComponent implements OnInit {
       new Floor("8th Floor", [new Room("806", false), new Room("807", false), new Room("807", false)]),
 
     ];
-    this.currentFloor = "9th Floor";
+    this.currentFloor =this.floors[0].name ;
   }
 
   ngOnInit() {
   }
 
-  floorClicked($ev) {
-    // this.currentFloor = floor.name;
-    // console.log(floor.name);
-    console.log($ev);
-    
-    
+  floorClicked(floor) {
+    this.currentFloor = floor.name;
   }
 
 }
