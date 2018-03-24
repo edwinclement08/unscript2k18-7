@@ -10,6 +10,7 @@ import { NoticeBoardComponent } from './notice-board/notice-board.component';
 import { SlotBookingComponent } from './slot-booking/slot-booking.component';
 import { CompanyPageComponent } from './company-page/company-page.component';
 import { StudentApplicationsComponent } from './student-applications/student-applications.component';
+import { EligibilityFormComponent } from './eligibility-form/eligibility-form.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { StudentApplicationsComponent } from './student-applications/student-app
     NoticeBoardComponent,
     SlotBookingComponent,
     CompanyPageComponent,
-    StudentApplicationsComponent
+    StudentApplicationsComponent,
+    EligibilityFormComponent
   ],
   imports: [
     BrowserModule

@@ -6,6 +6,7 @@
   <button class="button col-md-4" (click)="eligibilityCriteria()">Set Eligibility Criteria</button>
 </div>
 <div class="container">
+  
   <h1>
     <img id="img" src="https://media.licdn.com/mpr/mpr/shrink_200_200/AAMAAwQIAAkAAQAAAAAAABInAAAAJDA0NDI0MjE1LTYxYzUtNGE0NC05ZGQ3LTJjZmEyYjhiY2VjZA.bin">{{company.name}}
   </h1>
@@ -32,10 +33,6 @@
     <strong>Job Profile :</strong>
     {{company.job_profile}}
   </p>
-</div>
-
-<h2>Eligible Students: </h2>
-<div *ngFor="let student of studentList">
-  <strong>{{student.name}}</strong>
-  {{student.resume}}
+  <app-student-applications></app-student-applications>
+  <app-eligibility-form></app-eligibility-form>
 </div>
