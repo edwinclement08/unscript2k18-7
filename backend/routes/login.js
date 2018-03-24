@@ -23,7 +23,20 @@ router.post('/signup', (req,res,next)=>{
             
     }); 
 
-router.post('/login', passport.authenticate('local-login'));
+router.post('/login', (req,res,next)=>{
+
+    passport.authenticate('local-login',(err,user,info)=>{
+
+        if (err) { return res.json(info);; }
+        if (!user) { return res.json(info); }
+        req.logIn(user, function(err) {
+            if (err) { return next(err); }
+            return res.json(info);;
+          });
+      })(req, res, next);
+
+
+});
 
 router.get("/logout",function(req,res){
 	req.logout();

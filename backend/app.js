@@ -126,8 +126,7 @@ app.use(function(err, req, res, next) {
   
             // set the user's local credentials
             newUser.username    = username;
-            newUser.firstname   = req.body.fname ;
-            newUser.lastname    = req.body.lname;
+            newUser.name   = req.body.name ;
             newUser.email       = req.body.email;
             newUser.password    = newUser.generateHash(password);
             console.log(req.body);

@@ -8,7 +8,13 @@ var company = new mongoose.Schema({
 	minCrit:{
 		grade:String,
 		maxKt:String
-	}
+	},
+	event:[
+		{
+			type: mongoose.Schema.Types.ObjectId,
+			ref: "Event"
+		}
+	]
  });
 
 
