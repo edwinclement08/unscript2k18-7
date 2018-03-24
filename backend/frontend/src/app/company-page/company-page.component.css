@@ -21,3 +21,15 @@
     margin-bottom: 5px;
     height: 30em;
 }
+
+
+.tabButton.selected  {
+    color: #212529;
+}
+.tabButton  {
+    color: rgba(0,0,0,0.5)
+}
+.tabPage    {
+    min-height: 100vh;
+
+}

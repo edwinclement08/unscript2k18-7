@@ -9,12 +9,12 @@ export class StudentApplicationsComponent implements OnInit {
   studentList = [
     {
       name:"Joshua Noronha",
-      resume:"https://www.linkedin.com/company/morgan-stanley/",
+      resume:"https://www.linkedin.com/in/joshua-noronha-937330148/",
       isSelected:true
     },
     {
       name:"Joshua Noronha",
-      resume:"https://www.linkedin.com/company/morgan-stanley/",
+      resume:"https://www.linkedin.com/in/joshua-noronha-937330148/",
       isSelected:true
     }
   ]

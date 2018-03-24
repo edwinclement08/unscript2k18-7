@@ -1,5 +1,6 @@
 import { browser } from 'protractor';
 import { Component, OnInit } from '@angular/core';
+// import fabric from 'fabric';
 
 @Component({
   selector: 'app-slot-booking',
