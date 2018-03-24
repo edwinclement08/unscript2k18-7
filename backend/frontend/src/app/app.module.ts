@@ -9,6 +9,7 @@ import { LandingEventComponent } from './landing-event/landing-event.component';
 import { NoticeBoardComponent } from './notice-board/notice-board.component';
 import { SlotBookingComponent } from './slot-booking/slot-booking.component';
 import { CompanyPageComponent } from './company-page/company-page.component';
+import { StudentApplicationsComponent } from './student-applications/student-applications.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { CompanyPageComponent } from './company-page/company-page.component';
     LandingEventComponent,
     NoticeBoardComponent,
     SlotBookingComponent,
-    CompanyPageComponent
+    CompanyPageComponent,
+    StudentApplicationsComponent
   ],
   imports: [
     BrowserModule
