@@ -6,13 +6,18 @@ router.get("/student",function(req,res){
 
 	Student.find({},function(err,data){
 		console.log(data);
-		
-		res.end(JSON.stringify(data));
+		res.json(data);
 	});
-	console.log("ets");
+	// res.end("fss");
 	
 });
 
 
+router.get("student/:id",function(req,res){
+
+	Student.findById(req.params.id,(err,data)=>{
+		res.json(data);
+	});
+});
 
 module.exports = router;
