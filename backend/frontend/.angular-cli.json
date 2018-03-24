@@ -19,12 +19,14 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../node_modules/pikaday/css/pikaday.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js",
-        "assets/js/fabric.min.js"
+        "assets/js/fabric.min.js",
+        "../node_modules/pikaday/pikaday.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

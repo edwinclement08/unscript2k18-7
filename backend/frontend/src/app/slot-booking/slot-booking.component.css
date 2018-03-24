@@ -9,6 +9,10 @@
     vertical-align: middle;
 } 
 
+.rooms.selected {
+    border: thick grey solid !important;
+}
+
 .rooms:hover  {
     background: yellow;
 }
@@ -26,25 +30,47 @@
 
 .slotBooker{
     vertical-align: center;
-    min-height: 20vh;
+    min-height: 40vh;
     min-width:20vw;
-    max-width: 40vw;
+    max-width: 80vw;
     border: #bbb;
     border-radius: 20px;
     background-color: #eee;
-
+    
     padding: 20px;
 }
+.timeSlotBlocks  {
+    /* border: 1px lightgrey thin; */
+    border:lightgrey solid 1px;
+    background-color: lightgrey;
+    margin: 10px;
+    display: inline-block;
+    padding:6px;
+    text-align: center;
+    vertical-align: center;
+    border-radius: 5px;
 
-.slotBooker .row {
-    /* display: inline-block; */
-    /* max-width: 30vw; */
+
 }
 
 
-.floorSelection {
-    border-radius: 5px;
-    display: block;
-    
 
+.floorSelectOptions {
+    height:5vh;
+    width:5vw;
+    border: black thin solid;
+    display: inline-block;
+    margin:15px;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;  
+
+}
+
+.floorSelectOptions.current    {
+    background-color: grey;
+}
+
+.floorSelector  {
+    text-align:center;
 }
