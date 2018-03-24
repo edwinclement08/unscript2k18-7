@@ -1,20 +1,40 @@
-<div class="container"> 
+<div class="container">
   <h1>My Profile :</h1>
   <strong>Student Name :</strong> {{studentResume.firstName +" " +studentResume.firstName}}
   <!-- <div *ngFor=""> -->
   <strong>Email :</strong> {{studentResume.email}}
   <strong>Phone :</strong> {{studentResume.phone}}
-  <strong><h3>Education: </h3></strong>
-      <strong><h4>Undergraduate</h4>
-      </strong>
-      <div>
-        <strong>Degree :</strong>{{studentResume.resume.ug.deg}}
-        <strong>College :</strong>{{studentResume.resume.ug.clg}}
-        <strong>Start Year :</strong>{{studentResume.resume.ug.startYear}}
-        <strong>End Year :</strong>{{studentResume.resume.ug.endYear}}
-        <strong>Stream :</strong>{{studentResume.resume.ug.stream}}
-        <strong>Scale :</strong>{{studentResume.resume.ug.scale}}
-        <strong>Grade :</strong>{{studentResume.resume.ug.grade}}
-      </div>
-  <!-- </div> -->
+  <strong>
+    <h3>Education: </h3>
+  </strong>
+  <strong>
+    <h4>Undergraduate</h4>
+  </strong>
+  <div *ngFor="let ug of studentResume.resume.education.ug">
+    <strong>Degree :</strong>{{ug.deg}}
+    <strong>College :</strong>{{ug.clg}}
+    <strong>Start Year :</strong>{{ug.startYear}}
+    <strong>End Year :</strong>{{ug.endYear}}
+    <strong>Stream :</strong>{{ug.stream}}
+    <strong>Scale :</strong>{{ug.scale}}
+    <strong>Grade :</strong>{{ug.grade}}
+  </div>
+  <div *ngFor="let pg of studentResume.resume.education.pg">
+    <strong>Degree :</strong>{{pg.deg}}
+    <strong>College :</strong>{{pg.clg}}
+    <strong>Start Year :</strong>{{pg.startYear}}
+    <strong>End Year :</strong>{{pg.endYear}}
+    <strong>Stream :</strong>{{pg.stream}}
+    <strong>Scale :</strong>{{pg.scale}}
+    <strong>Grade :</strong>{{pg.grade}}
+  </div>
+  <div>
+    <strong>School : </strong>{{studentResume.resume.education.hsc}}
+    <strong>Year : </strong>{{studentResume.resume.education.hsc}}
+    <strong>Board : </strong>{{studentResume.resume.education.hsc}}
+    <strong>Scale : </strong>{{studentResume.resume.education.hsc}}
+    <strong>Grade : </strong>{{studentResume.resume.education.hsc}}
+    <strong>Stream : </strong>{{studentResume.resume.education.hsc}}
+  </div>
+
 </div>
