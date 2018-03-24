@@ -8,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class LandingEventComponent implements OnInit {
   eventList :any = [];
   constructor() { 
-    this.eventList = ["abc","123"];
+    this.eventList = [{
+      name:"Crescendo",
+      description:"Technical event of college"
+    },{
+      name:"Crescendo",
+      description:"Technical event of college"
+    },
+    {
+      name:"Crescendo",
+      description:"Technical event of college"
+    }];
   }
 
   ngOnInit() {
