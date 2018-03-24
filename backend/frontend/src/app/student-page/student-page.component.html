@@ -1,4 +1,20 @@
-<div class="container">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  23+*">
+<div class="container"> 
   <h1>My Profile :</h1>
-
+  <strong>Student Name :</strong> {{studentResume.firstName +" " +studentResume.firstName}}
+  <!-- <div *ngFor=""> -->
+  <strong>Email :</strong> {{studentResume.email}}
+  <strong>Phone :</strong> {{studentResume.phone}}
+  <strong><h3>Education: </h3></strong>
+      <strong><h4>Undergraduate</h4>
+      </strong>
+      <div>
+        <strong>Degree :</strong>{{studentResume.resume.ug.deg}}
+        <strong>College :</strong>{{studentResume.resume.ug.clg}}
+        <strong>Start Year :</strong>{{studentResume.resume.ug.startYear}}
+        <strong>End Year :</strong>{{studentResume.resume.ug.endYear}}
+        <strong>Stream :</strong>{{studentResume.resume.ug.stream}}
+        <strong>Scale :</strong>{{studentResume.resume.ug.scale}}
+        <strong>Grade :</strong>{{studentResume.resume.ug.grade}}
+      </div>
+  <!-- </div> -->
 </div>

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, PipeTransform } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
@@ -12,6 +12,7 @@ import { CompanyPageComponent } from './company-page/company-page.component';
 import { StudentApplicationsComponent } from './student-applications/student-applications.component';
 import { EligibilityFormComponent } from './eligibility-form/eligibility-form.component';
 import { StudentPageComponent } from './student-page/student-page.component';
+import { Pipe } from '@angular/core/src/metadata/directives';
 
 
 @NgModule({
