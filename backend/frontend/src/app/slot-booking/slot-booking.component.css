@@ -1,0 +1,50 @@
+.rooms   {
+    height:15vh;
+    width:15vw;
+    border: black thin solid;
+    display: inline-block;
+    margin:15px;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+} 
+
+.rooms:hover  {
+    background: yellow;
+}
+
+.rooms.booked   {
+    border: black thin solid;
+    background: red;
+    
+} 
+
+.rooms.booked:hover  {
+    background: red;
+}
+
+
+.slotBooker{
+    vertical-align: center;
+    min-height: 20vh;
+    min-width:20vw;
+    max-width: 40vw;
+    border: #bbb;
+    border-radius: 20px;
+    background-color: #eee;
+
+    padding: 20px;
+}
+
+.slotBooker .row {
+    /* display: inline-block; */
+    /* max-width: 30vw; */
+}
+
+
+.floorSelection {
+    border-radius: 5px;
+    display: block;
+    
+
+}
