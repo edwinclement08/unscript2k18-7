@@ -1,0 +1,38 @@
+<div class="cover">
+</div>
+<div class="row">
+  <button class="button col-md-4" (click)="companyProfile()">Company Profile</button>
+  <button class="button col-md-4" (click)="viewStudent()">View Student Applications</button>
+  <button class="button col-md-4" (click)="eligibilityCriteria()">Set Eligibility Criteria</button>
+</div>
+<div class="container">
+  
+  <h1>
+    <img id="img" src="https://media.licdn.com/mpr/mpr/shrink_200_200/AAMAAwQIAAkAAQAAAAAAABInAAAAJDA0NDI0MjE1LTYxYzUtNGE0NC05ZGQ3LTJjZmEyYjhiY2VjZA.bin">{{company.name}}
+  </h1>
+  <h2>About Us:</h2>
+  <p>{{company.description}}</p>
+  <h2>Company Details:</h2>
+  <p>
+    <strong>Website :</strong>
+    <a [href]=company.website>{{company.website}}</a>
+  </p>
+  <p>
+    <strong>Headquarters :</strong>
+    {{company.headquarters}}</p>
+  <p>
+    <strong>Company Type :</strong>
+    {{company.company_type}}</p>
+  <p>
+    <strong>Company Size :</strong>
+    {{company.company_size}}</p>
+  <p>
+    <strong>Company Specialities :</strong>
+    {{company.specialties}}</p>
+  <p>
+    <strong>Job Profile :</strong>
+    {{company.job_profile}}
+  </p>
+  <app-student-applications></app-student-applications>
+  <app-eligibility-form></app-eligibility-form>
+</div>
