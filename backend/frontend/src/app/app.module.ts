@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, PipeTransform } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
@@ -14,7 +15,17 @@ import { EligibilityFormComponent } from './eligibility-form/eligibility-form.co
 import { StudentPageComponent } from './student-page/student-page.component';
 import { Pipe } from '@angular/core/src/metadata/directives';
 import { CouncilPageComponent } from './council-page/council-page.component';
+import { TempComponent } from './temp/temp.component';
 
+// { path: 'hero/:id',      component: HeroDetailComponent },
+const appRoutes: Routes = [
+  { path: '',         component: LandingPageComponent,  data: { title: 'Home Page' }  },
+  { path: 'temp',     component: TempComponent, data: { title: 'Temp' }  },
+  { path: 'company',  component: CompanyPageComponent, data: { title: 'Company' } },
+  // { path: 'company',  component: TempComponent, data: { title: 'Company' } },
+  
+];
+//   { path: '**', component: PageNotFoundComponent }
 
 @NgModule({
   declarations: [
@@ -29,9 +40,12 @@ import { CouncilPageComponent } from './council-page/council-page.component';
     EligibilityFormComponent,
     StudentPageComponent,
     CouncilPageComponent
+    StudentPageComponent,
+    TempComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
