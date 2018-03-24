@@ -16,6 +16,8 @@ import { StudentPageComponent } from './student-page/student-page.component';
 import { Pipe } from '@angular/core/src/metadata/directives';
 import { CouncilPageComponent } from './council-page/council-page.component';
 import { TempComponent } from './temp/temp.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 // { path: 'hero/:id',      component: HeroDetailComponent },
 const appRoutes: Routes = [
@@ -41,7 +43,9 @@ const appRoutes: Routes = [
     StudentPageComponent,
     CouncilPageComponent
     StudentPageComponent,
-    TempComponent
+    TempComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
