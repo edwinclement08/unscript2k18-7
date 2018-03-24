@@ -1,14 +1,16 @@
 var express = require('express');
 var router = express.Router();
-var Student = require("./model/student"),
-
+var Student = require("../model/student");
 
 router.get("/student",function(req,res){
 
 	Student.find({},function(err,data){
-		res.end(data);
+		console.log(data);
+		
+		res.end(JSON.stringify(data));
 	});
-
+	console.log("ets");
+	
 });
 
 

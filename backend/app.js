@@ -3,6 +3,9 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require("mongoose");
+
+mongoose.connect('mongodb://mongo/myappdatabase');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -19,7 +22,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/tg', studentRouter);
-
 console.log((path.join(__dirname, 'frontend/dist/')));
 app.use(express.static(path.join(__dirname, 'frontend/dist/')));
 
