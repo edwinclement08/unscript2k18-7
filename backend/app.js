@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var studentRouter = require('./routes/student');
 var app = express();
 
 // view engine setup
@@ -17,6 +17,9 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+app.use('/tg', studentRouter);
+
 console.log((path.join(__dirname, 'frontend/dist/')));
 app.use(express.static(path.join(__dirname, 'frontend/dist/')));
 

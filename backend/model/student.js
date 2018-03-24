@@ -1,4 +1,5 @@
 var mongoose = require("mongoose");
+var bcrypt   = require("bcrypt-nodejs");
 
 
 var student = new mongoose.Schema({
@@ -101,4 +102,15 @@ var student = new mongoose.Schema({
  });
 
 
-module.exports = mongoose.model("Comment" , commentSchema);
+student.methods.generateHash = function(password) {
+    return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+};
+
+// checking if password is valid
+student.methods.validPassword = function(password) {
+    return bcrypt.compareSync(password, this.local.password);
+};
+
+
+
+module.exports = mongoose.model("Student" , student);
