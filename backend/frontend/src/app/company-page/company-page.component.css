@@ -21,7 +21,9 @@
     margin-bottom: 5px;
     height: 30em;
 }
-
+body{
+    text-align: center;
+}
 
 .tabButton.selected  {
     color: #212529;

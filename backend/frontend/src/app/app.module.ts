@@ -13,6 +13,7 @@ import { StudentApplicationsComponent } from './student-applications/student-app
 import { EligibilityFormComponent } from './eligibility-form/eligibility-form.component';
 import { StudentPageComponent } from './student-page/student-page.component';
 import { Pipe } from '@angular/core/src/metadata/directives';
+import { CouncilPageComponent } from './council-page/council-page.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { Pipe } from '@angular/core/src/metadata/directives';
     CompanyPageComponent,
     StudentApplicationsComponent,
     EligibilityFormComponent,
-    StudentPageComponent
+    StudentPageComponent,
+    CouncilPageComponent
   ],
   imports: [
     BrowserModule
