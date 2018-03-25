@@ -12,6 +12,7 @@ var app = express();
 var passportLocal=require("passport-local").Strategy;
 var cors = require("cors");
 
+
 setTimeout(() => {mongoose.connect('mongodb://mongo/myappdatabase')}, 1000)
 
 // mongoose.connect("mongodb://localhost/petShop1");
@@ -28,6 +29,7 @@ app.use(cors());
 app.use(passport.initialize());
 app.use(passport.session());
 
+var companyRouter = require('./routes/company');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var studentRouter = require('./routes/student');
@@ -63,6 +65,7 @@ app.get("/ee",function(req,res){
   // });
 });
 
+app.use(companyRouter);
 app.use(councilRouter);
 app.use(studentRouter);
 app.use(loginRouter);
