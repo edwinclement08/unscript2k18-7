@@ -1,3 +1,4 @@
+import { ApiService } from './../api.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CouncilPageComponent implements OnInit {
 council: any;
-  constructor() { 
+  constructor(ApiService:ApiService) { 
     this.council = {
       name:"Student Council",
       email:"studentcouncilcrce@gmail.com",
@@ -17,21 +18,35 @@ council: any;
           email:"ecua@gm.com",
           position:"Gen Sec",
           phone:"9833145467",
-          photo:"https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg"
+          photo:"http://bdfjade.com/data/out/152/6537653-material-wallpaper.png"
         },
         {
           name:"Edwin Clement",
           email:"ecua@gm.com",
           position:"Gen Sec",
           phone:"9833145467",
-          photo:"https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg"
+          photo:"http://bdfjade.com/data/out/152/6537653-material-wallpaper.png"
         },
         {
           name:"Edwin Clement",
           email:"ecua@gm.com",
           position:"Gen Sec",
           phone:"9833145467",
-          photo:"https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg"
+          photo:"http://bdfjade.com/data/out/152/6537653-material-wallpaper.png"
+        },
+        {
+          name:"Edwin Clement",
+          email:"ecua@gm.com",
+          position:"Gen Sec",
+          phone:"9833145467",
+          photo:"http://bdfjade.com/data/out/152/6537653-material-wallpaper.png"
+        },
+        {
+          name:"Edwin Clement",
+          email:"ecua@gm.com",
+          position:"Gen Sec",
+          phone:"9833145467",
+          photo:"http://bdfjade.com/data/out/152/6537653-material-wallpaper.png"
         }
       ]
     }

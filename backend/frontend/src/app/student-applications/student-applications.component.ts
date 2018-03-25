@@ -1,3 +1,4 @@
+import { ApiService } from './../api.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -18,9 +19,12 @@ export class StudentApplicationsComponent implements OnInit {
       isSelected:true
     }
   ]
-  constructor() { }
+  constructor(private ApiService:ApiService) {
+          
+   }
 
   ngOnInit() {
+    this.ApiService.getStudent().subscribe(data =>  this.studentList = data)  
   }
 
 }
