@@ -11,9 +11,9 @@ var app = express();
 var passportLocal=require("passport-local").Strategy;
 var cors = require("cors");
 
-// setTimeout(() => {mongoose.connect('mongodb://mongo/myappdatabase')}, 1000)
+setTimeout(() => {mongoose.connect('mongodb://mongo/myappdatabase')}, 1000)
 
-mongoose.connect("mongodb://localhost/petShop1");
+// mongoose.connect("mongodb://localhost/petShop1");
 
 
 
@@ -43,6 +43,24 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(__dirname + "/public"));
+
+
+
+app.get("/ee",function(req,res){
+  res.end("Temp");
+  console.log("Test");
+    
+  console.log(req.body)
+  // Student.find({},function(err,data){
+
+  // 	var studentList = [];
+  // 	data.forEach(function(s){
+      
+  // 		studentList.push(s.name);
+  // 	});
+  // 	res.json(studentList);
+  // });
+});
 
 app.use(councilRouter);
 app.use(studentRouter);
@@ -148,7 +166,6 @@ app.use(function(err, req, res, next) {
   }
   
   ));
-
 
 module.exports = app;
 

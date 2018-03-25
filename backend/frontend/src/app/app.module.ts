@@ -18,14 +18,14 @@ import { EligibilityFormComponent } from './eligibility-form/eligibility-form.co
 import { StudentPageComponent } from './student-page/student-page.component';
 import { Pipe } from '@angular/core/src/metadata/directives';
 import { CouncilPageComponent } from './council-page/council-page.component';
-import { TempComponent } from './temp/temp.component';
+// import { TempComponent } from './temp/temp.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 
 // { path: 'hero/:id',      component: HeroDetailComponent },
 const appRoutes: Routes = [
   { path: '',         component: LandingPageComponent,  data: { title: 'Home Page' }  },
-  { path: 'temp',     component: TempComponent, data: { title: 'Temp' }  },
+  // { path: 'temp',     component: TempComponent, data: { title: 'Temp' }  },
   { path: 'company',  component: CompanyPageComponent, data: { title: 'Company' } },
   // { path: 'company',  component: TempComponent, data: { title: 'Company' } },
   
@@ -46,7 +46,7 @@ const appRoutes: Routes = [
     StudentPageComponent,
     CouncilPageComponent,
     StudentPageComponent,
-    TempComponent,
+    
     LoginComponent,
     SignupComponent,
     

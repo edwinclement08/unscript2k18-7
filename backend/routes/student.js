@@ -2,7 +2,10 @@ var express = require('express');
 var router = express.Router();
 var Student = require("../model/student");
 
-router.get("/student",function(req,res){
+router.get("/students",function(req,res){
+
+	console.log("Test");
+		
 	console.log(req.body)
 	Student.find({},function(err,data){
 
@@ -12,7 +15,10 @@ router.get("/student",function(req,res){
 			studentList.push(s.name);
 		});
 		res.json(studentList);
+		res.end("mp12");
 	});
+	// res.end("mp");
+	
 });
 
 
