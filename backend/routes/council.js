@@ -36,8 +36,10 @@ router.post("/council",(req,res)=>{
 
 	newCouncil.name = req.body.name;
     newCouncil.email =  req.body.email;
+    console.log(req.body);
+    
     newCouncil.member = JSON.parse(req.body.member);
-	newCouncil.password = newStudent.generateHash(password);
+	newCouncil.password = newCouncil.generateHash(req.body.password);
 	
 	newCouncil.save(function(err){
 		if(err)

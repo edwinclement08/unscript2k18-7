@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var Student = require("../model/student");
 
-router.get("/students",function(req,res){
+router.get("/student",function(req,res){
 
 	console.log("Test");
 		
@@ -15,7 +15,7 @@ router.get("/students",function(req,res){
 			studentList.push(s.name);
 		});
 		res.json(studentList);
-		res.end("mp12");
+		// res.end("mp12");
 	});
 	// res.end("mp");
 	
@@ -44,10 +44,9 @@ router.get("student/:id/resume",function(req,res){
 
 router.post("/student",(req,res)=>{
 	var newStudent =  new Student();
-
 	newStudent.name = req.body.name;
 	newStudent.username = req.body.username;
-	newStudent.password = newStudent.generateHash(password);
+	newStudent.password = newStudent.generateHash(req.body.password);
 	
 	newStudent.save(function(err){
 		if(err)
