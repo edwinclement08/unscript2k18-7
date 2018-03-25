@@ -21,7 +21,7 @@ export class StudentApplicationsComponent implements OnInit {
   ]
   constructor(private ApiService:ApiService) {
           
-   }
+  }
 
   ngOnInit() {
     this.ApiService.getStudent().subscribe(data =>  this.studentList = data)  

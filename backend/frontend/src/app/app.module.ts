@@ -2,6 +2,8 @@ import { ApiService } from './api.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, PipeTransform } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpModule } from '@angular/http';
+
 
 
 import { AppComponent } from './app.component';
@@ -46,11 +48,13 @@ const appRoutes: Routes = [
     StudentPageComponent,
     TempComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

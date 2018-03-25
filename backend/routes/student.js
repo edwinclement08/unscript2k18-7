@@ -3,7 +3,7 @@ var router = express.Router();
 var Student = require("../model/student");
 
 router.get("/student",function(req,res){
-
+	console.log(req.body)
 	Student.find({},function(err,data){
 
 		var studentList = [];

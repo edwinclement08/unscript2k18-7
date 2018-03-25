@@ -10,7 +10,7 @@ export class ApiService {
   constructor(private http: Http) { }  
   login(user){      
     return this.http.post('http://localhost:8080/login', user)  
-            .map((response: Response) =>response.json())              
+            .map((response: Response) =>console.log(response.json()))              
   }  
   signUp(user){
     return this.http.post('http://localhost:8080/signup', user)  
@@ -18,7 +18,9 @@ export class ApiService {
   }
 
   getStudent(){      
-    return this.http.get('http://localhost:8080/student')  
+    let headers = new Headers({ 'Accept': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.get('http://localhost:8080/student',options)  
             .map((response: Response) =>response.json())              
   }  
   
