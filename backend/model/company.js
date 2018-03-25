@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-
+var bcrypt   = require("bcrypt-nodejs");
 
 var company = new mongoose.Schema({
 	name:String,
