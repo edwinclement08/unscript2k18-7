@@ -9,7 +9,7 @@ router.get("/student",function(req,res){
 		var studentList = [];
 		data.forEach(function(s){
 			
-			studentList.push(obj);
+			studentList.push(s.name);
 		});
 		res.json(studentList);
 	});

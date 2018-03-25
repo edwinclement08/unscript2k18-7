@@ -9,6 +9,7 @@ var passport = require("passport");
 var Student = require("./model/student")
 var app = express();
 var passportLocal=require("passport-local").Strategy;
+var cors = require("cors");
 
 // setTimeout(() => {mongoose.connect('mongodb://mongo/myappdatabase')}, 1000)
 
@@ -22,7 +23,7 @@ app.use(session({
 	resave : false,
 	saveUninitialized :false
 }));
-
+app.use(cors());
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -30,6 +31,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var studentRouter = require('./routes/student');
 var loginRouter = require("./routes/login");
+var councilRouter = require("./routes/council");
 var app = express();
 
 // view engine setup
@@ -42,6 +44,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(__dirname + "/public"));
 
+app.use(councilRouter);
 app.use(studentRouter);
 app.use(loginRouter);
 
